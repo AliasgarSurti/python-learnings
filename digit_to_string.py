@@ -34,3 +34,8 @@ try:
 except ValueError as err:
 	print (err)
 	exit()
+
+except IndexError as err:
+	print ("usage: python3.6 digit_to_string.py 56")
+	print (err)
+	exit()
