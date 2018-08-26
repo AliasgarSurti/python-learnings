@@ -5,7 +5,7 @@ e.g. python3.6 digit_to_string.py 56
 output:['five','six']
 
 Author: Aliasgar Surti
-Date: 23 August 2013
+Date: 23 August 2018
 '''
 import sys
 

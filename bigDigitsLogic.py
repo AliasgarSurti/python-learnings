@@ -5,7 +5,7 @@ e.g. python3.6 digit_to_string.py 56
 output:['five','six']
 
 Author: Aliasgar Surti
-Date: 24 August 2013
+Date: 24 August 2018
 '''
 import sys
 import bigDigits as digits
@@ -28,22 +28,20 @@ try:
 	param = 0
 	digitInInt = int(digit) # Only to check whether an int is passed.
 	numberOfElements = 7
-	unit = 0
 	while param < numberOfElements:
+		unit = 0
 		line = ""
 		lengthOfDigit = len(digit)
 		while lengthOfDigit:
 			line += numberToString(digit[unit])[param]
+			unit += 1
 			line += "   "
 			lengthOfDigit -= 1
 		print (line)
 		param += 1
-		#unit += 1
-
 except ValueError as err:
 	print (err)
 	exit()
-
 except IndexError as err:
 	print ("usage: python3.6 digit_to_string.py 56")
 	print (err)
