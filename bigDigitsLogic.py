@@ -33,7 +33,18 @@ try:
 		line = ""
 		lengthOfDigit = len(digit)
 		while lengthOfDigit:
-			line += numberToString(digit[unit])[param]
+			tempString = numberToString(digit[unit])[param]
+			l = len(tempString)
+			index = 0
+			tempString1 = ""
+			while l:
+				if tempString[index] == "*":
+					tempString1 += str(digit[unit])
+				else:
+					tempString1 += " "
+				l -= 1
+				index += 1
+			line += tempString1
 			unit += 1
 			line += "   "
 			lengthOfDigit -= 1
